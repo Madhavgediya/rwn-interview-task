@@ -6,9 +6,10 @@ const BlogDetails = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
+  // .get(`http://localhost:5000/api/blogs/${id}`)
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/blogs/${id}`)
+      .get(`https://rwn-interview-task-hxbk.vercel.app/api/blogs/${id}`)
       .then((res) => setBlog(res.data))
       .catch((error) => {
         console.error("Error fetching blog details:", error);

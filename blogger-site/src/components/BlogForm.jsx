@@ -71,7 +71,8 @@ const BlogForm = ({ fetchBlogs }) => {
         data.append("image", formData.image);
       }
 
-      await axios.post("http://localhost:5000/api/blogs", data, {
+      // await axios.post("http://localhost:5000/api/blogs", data, {
+      await axios.post("https://rwn-interview-task-hxbk.vercel.app/api/blogs", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

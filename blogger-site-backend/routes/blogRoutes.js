@@ -19,7 +19,8 @@ router.post("/", upload.single("image"), async (req, res) => {
     let imagePath = "";
 
     if (req.file) {
-      imagePath = `http://localhost:5000/uploads/${req.file.filename}`;
+      // imagePath = `http://localhost:5000/uploads/${req.file.filename}`;
+      imagePath = `https://rwn-interview-task-hxbk.vercel.app/uploads/${req.file.filename}`;
     } else if (req.body.image && req.body.image.startsWith("http")) {
       imagePath = req.body.image;
     }
